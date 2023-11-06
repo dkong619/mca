@@ -1,4 +1,5 @@
 Acitivity_main.xml
+
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
@@ -7,6 +8,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".MainActivity">
+
 <TextView
 android:layout_width="178dp"
 android:layout_height="40dp"
@@ -19,6 +21,7 @@ app:layout_constraintBottom_toBottomOf="parent"
 app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toTopOf="parent" />
+
 <Button
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
@@ -29,6 +32,7 @@ app:layout_constraintHorizontal_bias="0.798"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toTopOf="parent"
 app:layout_constraintVertical_bias="0.717" />
+
 <Button
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
@@ -39,19 +43,22 @@ app:layout_constraintHorizontal_bias="0.182"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toTopOf="parent"
 app:layout_constraintVertical_bias="0.717" />
-9
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 MainActivity.java
 
 package com.codedost;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -60,37 +67,42 @@ setContentView(R.layout.activity_main);
 Log.d("Activity_Lifecycle","onCreate invoked");
 Toast.makeText(MainActivity.this,"Created",Toast.LENGTH_SHORT).show();
 }
+
 @Override
 protected void onStart() {
 super.onStart();
 Log.d("Activity_Lifecycle","onStart invoked");
 Toast.makeText(MainActivity.this,"Start",Toast.LENGTH_SHORT).show();
 }
+
 @Override
 protected void onResume() {
 super.onResume();
 Log.d("Activity_Lifecycle","onResume invoked");
 Toast.makeText(MainActivity.this,"Resume",Toast.LENGTH_SHORT).show();
 }
+
 @Override
 protected void onPause() {
 super.onPause();
 Log.d("Activity_Lifecycle","onPause invoked");
 Toast.makeText(MainActivity.this,"Pause",Toast.LENGTH_SHORT).show();
 }
+
 @Override
-10
 protected void onStop() {
 super.onStop();
 Log.d("Activity_Lifecycle","onStop invoked");
 Toast.makeText(MainActivity.this,"Stop",Toast.LENGTH_SHORT).show();
 }
+
 @Override
 protected void onRestart() {
 super.onRestart();
 Log.d("Activity_Lifecycle","onRestart invoked");
 Toast.makeText(MainActivity.this,"Restart",Toast.LENGTH_SHORT).show();
 }
+
 @Override
 protected void onDestroy() {
 super.onDestroy();
