@@ -106,7 +106,6 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 Button pause_button, stop_button, start_button, change_track;
-
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState);
